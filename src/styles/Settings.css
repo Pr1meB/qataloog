@@ -1,0 +1,86 @@
+
+.settings-page {
+  display: flex;
+}
+
+.settings-content {
+  padding: 20px;
+  width: 100%;
+}
+
+.settings-tabs {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+
+.settings-tabs button {
+  padding: 10px 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.settings-tabs button.inactive {
+  color: gray;
+  font-weight: 600;
+}
+
+.settings-tabs button.active {
+  color: black;
+  font-weight: 800;
+  border-bottom: 2px solid #f4623A;
+}
+
+.tab-content {
+  margin-top: 20px;
+}
+
+.profile-tab, .password-tab, .subscriptions-tab, .publisher-earnings-tab {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.profile-picture-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.profile-picture-buttons{
+  display: flex;
+ flex-direction: column;
+ gap: 20px;
+}
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.upload-button, .remove-button, .update-button {
+  background-color: #f4623A;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
