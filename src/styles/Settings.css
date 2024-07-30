@@ -1,6 +1,8 @@
 
 .settings-page {
   display: flex;
+  height: 100%;
+  min-height: 100%;
 }
 
 .settings-content {
@@ -28,11 +30,13 @@
 .settings-tabs button.active {
   color: black;
   font-weight: 800;
-  border-bottom: 2px solid #f4623A;
+  border-bottom: 2px solid #F14119;
 }
 
 .tab-content {
   margin-top: 20px;
+  margin-left: unset;
+  padding-left: unset;
 }
 
 .profile-tab, .password-tab, .subscriptions-tab, .publisher-earnings-tab {
@@ -47,26 +51,65 @@
   margin-bottom: 20px;
 }
 
+
 .profile-picture-buttons{
   display: flex;
  flex-direction: column;
  gap: 20px;
 }
 
-.profile-picture {
-  width: 100px;
-  height: 100px;
+.profile-picture-div {
+  width: 204px;
+  height: 204px;
+  border: 2px 0px 0px 0px;
+  opacity: 0px;
   border-radius: 50%;
-  background-color: red;
+  background-color: #F14119;
+}
+
+.profile-picture {
+  width: 204px;
+  height: 204px;
+  border: 2px 0px 0px 0px;
+  opacity: 0px;
+  border-radius: 50%;
+  background: url("https://s3-alpha-sig.figma.com/img/1fe8/1320/0d819615bd2143ddd71197f6c6bf27eb?Expires=1723420800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=R5e5Jk4VbUW3ck7VbD6VHQB-UTg0fWO0paJ6aVJMD7Syw6ndPgaZhsgtX9r0qbJBcmV-LuFEPFqx6XINk0G0HjuaQqmvpE4cUkiQ4ldI4CiLfbkpuXZdBi3YOSFcEUuk296uuulC6y1SP4kO036iQhOkK-dVWotkekHC8UJiOJXJ69ICVEiQ1J0HBcZ-zvS0cDLL4zbLBc~uHDSEMRBgpCH42~Bn0nDDeOAujukKLCm5JxQgxhDPK8t6jFyilyUb4aCoKilevtEXeYqhsOtl-O1mvIIq22KFqJlCwV6TVATz2BIByGPs-6VVIkjjZjt34gRTex7InHFSLyEEgvKzIg__");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .upload-button, .remove-button, .update-button {
-  background-color: #f4623A;
+  background-color: #F14119;
   color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 20px;
+}
+
+
+.update-button:hover {
+  background-color: transparent;
+  border: 1px solid #F14119;
+  color: #F14119;
+}
+
+.upload-button:hover {
+  background-color: transparent;
+  border: 1px solid #F14119;
+  color: #F14119;
+}
+
+.remove-button {
+  background-color: transparent;
+  border: 1px solid #F14119;
+  color: #F14119;
+}
+
+.remove-button:hover {
+  color: #ffffff; /* Orange text color */
+  background-color: #F14119; /* Orange text color */
 }
 
 .form-group {
@@ -82,5 +125,65 @@
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 20px;
+}
+
+/*
+.form-group {
+  margin-bottom: 16px;
+}*/
+
+.password-input-wrapper {
+  position: relative;
+}
+
+.eyeicon {
+  color: #F14119;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.toggle-password .MuiSvgIcon-root {
+  color: #F14119;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.correct {
+  color: green;
+}
+
+
+.success-message {
+  color: green;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.success-message .material-icons-outlined {
+  font-size: 12px;
+  margin-right: 4px;
+  color: green;
+}
+
+.error-message .material-icons-outlined {
+  font-size: 12px;
+  margin-right: 4px;
+  color: red;
 }

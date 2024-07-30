@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+
+.pb-table-page {
+  padding: 20px;
+ /* background-color: #f5f5f5;*/
+  border-radius: 8px;
+
+}
+
+.pb-table-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+
+.pb-country-select {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+
+
+.pb-data-table {
+  width: 100%;
+  border-collapse: separate; /* Ensure separate borders to use border-radius */
+  border-spacing: 0 10px; /* Space rows with margins */
+}
+
+.pb-data-table th, .pb-data-table td {
+  padding: 6px 15px;
+  text-align: left;
+  border: none; /* Remove borders */
+  font-size: 14px;
+}
+
+.material-symbols-outlined {
+  font-size: 13px;
+}
+
+.pb-data-table th {
+  background-color: #fafafa;
+  font-weight: bold;
+  border-radius: 8px 8px 0 0;
+}
+
+.pb-data-table tbody tr {
+  background-color: #ffffff;
+  border-radius: 8px;
+  display: table-row;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* To round the corners */
+}
+
+.pb-edit-button, .pb-delete-button, .pb-update-button, .pb-cancel-button {
+  border: none;
+  background: none;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.pb-edit-button .material-symbols-outlined, .pb-update-button .material-symbols-outlined {
+  color: #000000;
+  display: inline;
+}
+
+.pb-delete-button .material-symbols-outlined {
+  color: #F14119;
+}
+
+.pb-delete-button {
+  background-color: #ffcc99;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.pb-update-button .material-symbols-outlined {
+  color: #5cb85c; /* Slightly lighter green */
+}
+
+.pb-cancel-button .material-symbols-outlined {
+  color: #d9534f; /* Red color */
+}
+
+.pb-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 5px;
+}
+
+.pb-pagination button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pb-pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pb-pagination button:not(:disabled):hover {
+  background-color: #0056b3;
+}
+
+
+    .custom-select {
+      position: relative;
+      display: inline-block;
+      width: 200px;
+    }
+
+    .select-selected {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .select-selected img {
+      width: 20px;
+      height: auto;
+      margin-right: 10px;
+    }
+
+    .select-items {
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-top: none;
+      max-height: 200px;
+      overflow-y: auto;
+      width: 100%;
+      z-index: 99;
+      display: none;
+    }
+
+    .select-items div {
+      padding: 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+
+    .select-items div img {
+      width: 20px;
+      height: auto;
+      margin-right: 10px;
+    }
+
+    .select-items div:hover {
+      background-color: #f1f1f1;
+    }
+
+input {
+  width: 200px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}

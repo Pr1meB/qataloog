@@ -1,0 +1,77 @@
+ .custom-select {
+      position: relative;
+      display: inline-block;
+      width: 200px;
+    }
+
+    .select-selected {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .select-selected img {
+      width: 20px;
+      height: auto;
+      margin-right: 10px;
+    }
+
+    .select-items {
+      position: absolute;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-top: none;
+      max-height: 200px;
+      overflow-y: auto;
+      width: 100%;
+      z-index: 99;
+      display: none;
+    }
+
+    .select-items div {
+      padding: 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+
+    .select-items div img {
+      width: 20px;
+      height: auto;
+      margin-right: 10px;
+    }
+
+    .select-items div:hover {
+      background-color: #f1f1f1;
+    }
+
+
+.tab-container {
+  display: flex;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  width: 300px; /* Adjust the width as needed */
+  border-radius: 10px;
+  font-size: 10px;
+  margin-top: 2em;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  margin: 2px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tab.active {
+  background-color: #ffcc99; /* Color for active tab */
+  border-radius: 10px;
+  font-weight: bold;
+}

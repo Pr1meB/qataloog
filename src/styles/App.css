@@ -1,10 +1,10 @@
+/* App.css */
 
 .app {
   display: flex;
   flex-direction: column;
   height: 100vh;
   overflow: hidden; /* Prevents body from scrolling */
-  
 }
 
 header {
@@ -17,16 +17,74 @@ header {
 .main-content {
   display: flex;
   flex: 1;
-  overflow: hidden; /* Ensures that the content area does not scroll */
-  overflow-y: auto;
+  overflow: scroll; /* Ensures that the content area does not scroll */
+  overflow-x: hidden;
 }
-
-
 
 .content {
   flex: 1;
   padding: 25px;
+  height: 140%;
+  overflow: scroll;
+  min-height: 140%;
   padding-left: 60px;
   background-color: #f8f9fa;
   margin-left: 240px; /* Offset for the sidebar */
+}
+
+/* Sidebar styles */
+/*.sidebar {
+  width: 240px;
+  height: 100vh;
+  background-color: #343a40;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  z-index: 1000;
+}*/
+
+/* Collapsed sidebar styles */
+.sidebar.collapsed {
+  transform: translateX(-240px);
+}
+
+/* Button to toggle sidebar */
+.sidebar-toggle {
+  display: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: static;
+    height: auto;
+    transform: none;
+  }
+
+  .sidebar.collapsed {
+    display: none;
+  }
+
+  .sidebar-toggle {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #F14119;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
 }
