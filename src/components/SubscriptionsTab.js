@@ -61,7 +61,7 @@ const SubscriptionsTab = () => {
       </div>
 
       <div className="tab-container mx-auto mb-4">
-        <div className="tab active">Yearly</div>
+        <div className="tab active">Termly</div>
         <div className="tab">Annually</div>
         <div className="tab">Bi-Annually</div>
       </div>
