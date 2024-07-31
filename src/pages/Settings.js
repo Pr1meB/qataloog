@@ -44,7 +44,7 @@ const Settings = () => {
   return (
     <div className="settings-page">
       <div className="settings-content">
-        <h1>{translations[language].settings}</h1>
+        <h2>{translations[language].settings}</h2>
         <div className="settings-tabs">
           <button onClick={() => setActiveTab('profile')} className={activeTab === 'profile' ? 'active' : 'inactive'}>
             {translations[language].profile}

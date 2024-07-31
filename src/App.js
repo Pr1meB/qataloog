@@ -2,14 +2,20 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
+import SideSmall from './components/sidesmall';
 import Settings from './pages/Settings';
 import './styles/App.css';
 
 function App() {
-  const [isSidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [isSidebarCollapsed] = useState(false);
+  const [isSideSmallOpen, setSideSmallOpen] = useState(false);
 
-  const toggleSidebar = () => {
-    setSidebarCollapsed(!isSidebarCollapsed);
+  const toggleSideSmall = () => {
+    setSideSmallOpen(!isSideSmallOpen);
+  };
+
+  const closeSideSmall = () => {
+    setSideSmallOpen(false);
   };
 
   return (
@@ -19,7 +25,7 @@ function App() {
         <div className="main-content">
           <button
             className="sidebar-toggle"
-            onClick={toggleSidebar}
+            onClick={toggleSideSmall}
           >
             ☰
           </button>
@@ -31,6 +37,7 @@ function App() {
             </Routes>
           </div>
         </div>
+        {isSideSmallOpen && <SideSmall onClose={closeSideSmall} />}
       </div>
     </Router>
   );

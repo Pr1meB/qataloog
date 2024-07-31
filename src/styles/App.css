@@ -27,7 +27,7 @@ header {
   height: 140%;
   overflow: scroll;
   min-height: 140%;
-  padding-left: 60px;
+/*  padding-left: 60px;*/
   background-color: #f8f9fa;
   margin-left: 240px; /* Offset for the sidebar */
 }
@@ -64,6 +64,7 @@ header {
 
   .content {
     margin-left: 0;
+    font-size: 12px;
   }
 
   .sidebar {
@@ -84,7 +85,157 @@ header {
     left: 10px;
     color: #F14119;
     border: none;
+    background: none;
     padding: 10px;
+    margin-right: 2em;
     cursor: pointer;
   }
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+
+
+.header-logo {
+  height: 15px;
+  margin-left: 30px;
+}
+
+
+.language-select span {
+  font-size: 12px;
+}
+
+
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.user-profile span {
+  display: none;
+}
+
+.user-avatar {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.user-name {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+.language-icon {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  margin-right: 2px;
+}
+
+
+.settings-tabs button {
+  padding: 10px 10px;
+  font-size: 12px;
+}
+
+.settings-tabs button.inactive {
+  font-weight: 500;
+}
+
+.settings-tabs button.active {
+  font-weight: 700;
+}
+
+
+
+.pb-table-page {
+  padding: 20px;
+ /* background-color: #f5f5f5;*/
+  border-radius: 8px;
+
+}
+
+.pb-table-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+
+.pb-country-select {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+
+
+.pb-data-table {
+  width: 100%;
+  border-collapse: separate; /* Ensure separate borders to use border-radius */
+  border-spacing: 0 6px; /* Space rows with margins */
+}
+
+.pb-data-table th, .pb-data-table td {
+  font-size: 12px;
+}
+
+.material-symbols-outlined {
+  font-size: 10px;
+}
+
+
+.pb-edit-button, .pb-delete-button, .pb-update-button, .pb-cancel-button {
+  font-size: 12px;
+}
+
+
+
+.pb-delete-button {
+  padding: 3px;
+}
+
+
+
+.pb-pagination {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pb-pagination button {
+  padding: 4px 8px;
+}
+
+
+    .custom-select {
+      position: relative;
+      display: inline-block;
+      width: 200px;
+      margin-right: 1.3em;
+    }
+
+.sm-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  color: #333;
+}
+
+.close-btn {
+  font-size: 24px;
+}
+
+}
+

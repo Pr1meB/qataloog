@@ -89,9 +89,10 @@
 
 .pb-pagination {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   margin-top: 20px;
+  margin-bottom: 1em;
   gap: 5px;
 }
 

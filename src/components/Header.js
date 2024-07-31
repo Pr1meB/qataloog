@@ -4,8 +4,18 @@ import userAvatar from '../assets/images/propic.webp'; // replace with the actua
 import logo from '../assets/images/qataloog.png';
 
 const languages = {
-  en: { label: 'English', code: 'en', image: 'https://media.istockphoto.com/id/652740802/vector/nigeria.jpg?s=612x612&w=0&k=20&c=CzqO6nCnCM6KXJp-nZWBV3oxRI5963lwdnQ5TT4TN7Q=' },
-  fr: { label: 'Francais', code: 'fr', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTClQ9DDh-XExBS812l-GWVqUrfAT9h6WGUbQ&s' },
+  en: {
+    label: 'English',
+    code: 'en',
+    image: 'https://media.istockphoto.com/id/652740802/vector/nigeria.jpg?s=612x612&w=0&k=20&c=CzqO6nCnCM6KXJp-nZWBV3oxRI5963lwdnQ5TT4TN7Q=',
+    admin: 'Qataloog Admin'
+  },
+  fr: {
+    label: 'Français',
+    code: 'fr',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTClQ9DDh-XExBS812l-GWVqUrfAT9h6WGUbQ&s',
+    admin: 'Admin de Qataloog'
+  }
 };
 
 const Header = () => {
@@ -24,22 +34,26 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-left">
-        <img src={logo} alt="Qatalog Logo" className="header-logo" />
+        <img src={logo} alt="Qataloog Logo" className="header-logo" />
       </div>
       <div className="header-right">
         <div className="language-select">
-          <span><img src={languages[selectedLanguage].image} alt="User Avatar" className="language-icon" /> {languages[selectedLanguage].label}</span>
+          <span>
+            <img src={languages[selectedLanguage].image} alt="Flag" className="language-icon" />
+            {languages[selectedLanguage].label}
+          </span>
           <div className="language-dropdown">
             {Object.keys(languages).map((lang) => (
               <div key={lang} onClick={() => changeLanguage(lang)}>
-                <img src={languages[lang].image} alt="User Avatar" className="language-icon" /> {languages[lang].label}
+                <img src={languages[lang].image} alt="Flag" className="language-icon" />
+                {languages[lang].label}
               </div>
             ))}
           </div>
         </div>
         <div className="user-profile">
           <img src={userAvatar} alt="User Avatar" className="user-avatar" />
-          <span className="user-name">Qatalog Admin</span>
+          <span className="user-name">{languages[selectedLanguage].admin}</span>
         </div>
       </div>
     </header>

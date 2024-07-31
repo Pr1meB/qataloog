@@ -5,8 +5,12 @@
   min-height: 100%;
 }
 
+.settings-page h1 {
+  margin-bottom: 2em;
+}
+
 .settings-content {
-  padding: 20px;
+  padding: 0px;
   width: 100%;
 }
 
@@ -20,6 +24,7 @@
   border: none;
   background: none;
   cursor: pointer;
+  font-size: 15px;
 }
 
 .settings-tabs button.inactive {
@@ -73,7 +78,7 @@
   border: 2px 0px 0px 0px;
   opacity: 0px;
   border-radius: 50%;
-  background: url("https://s3-alpha-sig.figma.com/img/1fe8/1320/0d819615bd2143ddd71197f6c6bf27eb?Expires=1723420800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=R5e5Jk4VbUW3ck7VbD6VHQB-UTg0fWO0paJ6aVJMD7Syw6ndPgaZhsgtX9r0qbJBcmV-LuFEPFqx6XINk0G0HjuaQqmvpE4cUkiQ4ldI4CiLfbkpuXZdBi3YOSFcEUuk296uuulC6y1SP4kO036iQhOkK-dVWotkekHC8UJiOJXJ69ICVEiQ1J0HBcZ-zvS0cDLL4zbLBc~uHDSEMRBgpCH42~Bn0nDDeOAujukKLCm5JxQgxhDPK8t6jFyilyUb4aCoKilevtEXeYqhsOtl-O1mvIIq22KFqJlCwV6TVATz2BIByGPs-6VVIkjjZjt34gRTex7InHFSLyEEgvKzIg__");
+  background: url("../assets/images/propic.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
