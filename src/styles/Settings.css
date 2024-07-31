@@ -48,7 +48,6 @@
   max-width: 600px;
   margin: 0 auto;
 }
-
 .profile-picture-section {
   display: flex;
   align-items: center;
@@ -56,33 +55,30 @@
   margin-bottom: 20px;
 }
 
-
-.profile-picture-buttons{
+.profile-picture-buttons {
   display: flex;
- flex-direction: column;
- gap: 20px;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .profile-picture-div {
   width: 204px;
   height: 204px;
-  border: 2px 0px 0px 0px;
-  opacity: 0px;
   border-radius: 50%;
   background-color: #F14119;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensures the image fits within the div and is not larger */
 }
 
 .profile-picture {
-  width: 204px;
-  height: 204px;
-  border: 2px 0px 0px 0px;
-  opacity: 0px;
-  border-radius: 50%;
-  background: url("../assets/images/propic.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes sure the image covers the div without distorting */
+
 }
+
 
 .upload-button, .remove-button, .update-button {
   background-color: #F14119;

@@ -35,67 +35,67 @@ const SideSmall = ({ onClose }) => {
   const language = localStorage.getItem('language') || 'en';
 
   return (
-    <div className="sm-backdrop" onClick={onClose}>
-      <div className="sm-sidebar" onClick={(e) => e.stopPropagation()}>
+    <div className="sm-backdrop open" onClick={onClose}>
+      <div className="sm-sidebar open" onClick={(e) => e.stopPropagation()}>
         <button className="sm-close-btn" onClick={onClose}>
           <i className="close-btn material-symbols-outlined">close</i>
         </button>
         <nav>
           <ul className="sm-sidebar-items">
             <li>
-              <NavLink to="/dashboard" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+              <NavLink to="/dashboard" className={({ isActive }) => (isActive ? 'sm-active-link' : '')}>
                 <i className="material-icons-outlined">grid_view</i> {translations[language].dashboard}
               </NavLink>
             </li>
             <li>
-              <NavLink to="/users" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+              <NavLink to="/users" className={({ isActive }) => (isActive ? 'sm-active-link' : '')}>
                 <i className="material-icons-outlined">group</i> {translations[language].users}
               </NavLink>
             </li>
             <li>
-              <NavLink to="/admins" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+              <NavLink to="/admins" className={({ isActive }) => (isActive ? 'sm-active-link' : '')}>
                 <i className="material-icons-outlined">admin_panel_settings</i> {translations[language].admins}
               </NavLink>
             </li>
             <li>
-              <NavLink to="/coupon-codes" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+              <NavLink to="/coupon-codes" className={({ isActive }) => (isActive ? 'sm-active-link' : '')}>
                 <i className="material-icons-outlined">confirmation_number</i> {translations[language].couponCodes}
               </NavLink>
             </li>
             <li>
-              <NavLink to="/academic-levels" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+              <NavLink to="/academic-levels" className={({ isActive }) => (isActive ? 'sm-active-link' : '')}>
                 <i className="material-icons-outlined">account_tree</i> {translations[language].academicLevels}
               </NavLink>
             </li>
             <li>
-              <NavLink to="/platforms" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+              <NavLink to="/platforms" className={({ isActive }) => (isActive ? 'sm-active-link' : '')}>
                 <i className="material-icons-outlined">location_city</i> {translations[language].platforms}
               </NavLink>
             </li>
             <li>
-              <NavLink to="/countries" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+              <NavLink to="/countries" className={({ isActive }) => (isActive ? 'sm-active-link' : '')}>
                 <i className="material-icons-outlined">flag</i> {translations[language].countries}
               </NavLink>
             </li>
             <li>
-              <NavLink to="/content-type" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+              <NavLink to="/content-type" className={({ isActive }) => (isActive ? 'sm-active-link' : '')}>
                 <i className="material-icons-outlined">photo_library</i> {translations[language].contentType}
               </NavLink>
             </li>
             <li className="center">
-              <NavLink to="/withdrawals" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+              <NavLink to="/withdrawals" className={({ isActive }) => (isActive ? 'sm-active-link' : '')}>
                 <i className="material-icons-outlined">credit_card</i> {translations[language].withdrawals}
               </NavLink>
             </li>
             <li>
-              <NavLink to="/settings" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+              <NavLink to="/settings" className={({ isActive }) => (isActive ? 'sm-active-link' : '')}>
                 <i className="material-icons-outlined">settings</i> {translations[language].settings}
               </NavLink>
             </li>
           </ul>
         </nav>
         <div className="sm-logout">
-          <NavLink to="/logout" className={({ isActive }) => (isActive ? 'active-link' : '')}>
+          <NavLink to="/logout" className={({ isActive }) => (isActive ? 'sm-active-link' : '')}>
             <i className="material-icons-outlined">logout</i> {translations[language].logout}
           </NavLink>
         </div>

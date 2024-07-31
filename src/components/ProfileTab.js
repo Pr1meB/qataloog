@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import intlTelInput from 'intl-tel-input';
+import profilepic from '../assets/images/propic.png';
 import 'intl-tel-input/build/css/intlTelInput.css'; // Import the CSS for styling
 
 const ProfileTab = () => {
@@ -22,7 +23,7 @@ const ProfileTab = () => {
     <div className="profile-tab">
       <div className="profile-picture-section">
         <div className="profile-picture-div">
-          <div className="profile-picture"></div>
+          <img src={profilepic} alt="User Avatar" className="profile-pic" />
         </div>
         <div className="profile-picture-buttons">
           <button className="upload-button">Upload New Picture</button>

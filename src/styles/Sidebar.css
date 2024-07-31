@@ -52,11 +52,13 @@ nav ul li a:hover {
   border-radius: 4px; /* Add border radius for better aesthetics */
   width: 100%; /* Full width of the parent */
   padding: 10px; /* Add padding for better spacing */
+  border-left: 5px solid #F14119;
 }
 
 .logout {
   margin-bottom: 20px;
   text-align: center; /* Centers the logout link */
+  margin-left: 1em;
 }
 
 .logout a {

@@ -1,3 +1,4 @@
+/* Backdrop */
 .sm-backdrop {
   position: fixed;
   top: 0;
@@ -10,9 +11,18 @@
   justify-content: flex-start;
   align-items: center;
   z-index: 1000;
-  transition: opacity 0.3s ease;
+  transition: opacity 1s ease, visibility 1s ease;
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* Initially hidden */
 }
 
+/* Show backdrop when open */
+.sm-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Sidebar */
 .sm-sidebar {
   width: 250px;
   height: 100%;
@@ -24,8 +34,19 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
-  position: relative;
+  position: absolute; /* Change from relative to absolute for positioning */
+  left: -250px; /* Initially hidden */
+  transition: transform 2s ease; /* Smooth slide transition */
 }
+
+/* Show sidebar when open */
+.sm-sidebar.open {
+  transform: translateX(250px); /* Move sidebar into view */
+}
+
+/* Responsive adjustments */
+
+
 
 
 nav ul.sm-sidebar-items {
@@ -58,7 +79,7 @@ nav ul.sm-sidebar-items li a:hover {
   padding: 10px;
 }
 
-.active-link {
+.sm-active-link {
   color: #F14119;
   background-color: #ffcc99;
   border-radius: 4px;
@@ -69,6 +90,7 @@ nav ul.sm-sidebar-items li a:hover {
 .sm-logout {
   margin-bottom: 20px;
   text-align: center;
+  margin-left: 1em;
 }
 
 .sm-logout a {
